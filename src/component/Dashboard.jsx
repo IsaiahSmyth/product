@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 import {useNavigate} from 'react-router-dom'
+import Product from './Product'
 
 const Dashboard = () => {
 
@@ -30,7 +31,7 @@ const Dashboard = () => {
             <h1>All Products:</h1>
             {
                 product.map((product, key) =>{
-                    return <p onClick={getProductData} key={key}>{product}</p>
+                    return <Product onClick={getProductData} key={key} prod={product}/>
                 })
             }
             
